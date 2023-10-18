@@ -1,0 +1,9 @@
+.DS_Store
+npm-debug.log
+/node_modules/
+/public/s
+/public/docs
+/version.json
+/dist/
+.idea/
+/.npm
