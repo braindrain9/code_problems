@@ -28,7 +28,7 @@
  */
 
 let twoSum = function(nums, target) {
-    // let indexes;
+    let indexes;
 
     // 1. O(n)2 complexity. ~ Runtime: 287 ms, Memory: 44.4 MB
     // nums.forEach((num, i) => { // O(n)
