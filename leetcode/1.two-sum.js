@@ -25,9 +25,11 @@
  * Output: [0,1]
  *
  * Only one valid answer exists.
+ *
+ * Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
  */
 
-let twoSum = function(nums, target) {
+const twoSum = function(nums, target) {
     let indexes;
 
     // 1. Brute Force. O(n)2 complexity. ~ Runtime: 287 ms, Memory: 44.4 MB
@@ -38,9 +40,10 @@ let twoSum = function(nums, target) {
     //     }
     //   });
     // });
+    // -------------------------------------------------------- //
 
     // 2. Set. O(n)2 complexity. ~ Runtime: 158 ms, Memory: 45.1 MB
-    // let numSet = new Set(nums); // O(n)
+    // const numSet = new Set(nums); // O(n)
 
     // nums.forEach((num, i) => { // O(n)
     //   let difference = target - num;
@@ -50,6 +53,7 @@ let twoSum = function(nums, target) {
     //       indexes = [diffIndex, i]; // O(1)
     //   }
     // });
+    // -------------------------------------------------------- //
 
     // 3. Two-pass Hash Table with Map. O(n) complexity. ~ Runtime: 64 ms, Memory: 45.1 MB
     // const numMap = new Map();
@@ -66,6 +70,7 @@ let twoSum = function(nums, target) {
     //       indexes = [diffIndex, i]; // O(1) :=)
     //   }
     // });
+    // -------------------------------------------------------- //
 
     // 4. One-pass Hash Table with Map. O(n) complexity. ~ Runtime: 53 ms, Memory: 45 MB
     const numMap = new Map();
@@ -84,6 +89,7 @@ let twoSum = function(nums, target) {
     return indexes;
 };
 
+// Test Cases:
 twoSum([2, 7, 11, 15], 9); // [0,1]
 twoSum([3, 2, 4], 6); // [1,2]
 twoSum([3, 3], 6); // [0,1]
