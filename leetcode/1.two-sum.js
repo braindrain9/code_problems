@@ -30,7 +30,7 @@
 let twoSum = function(nums, target) {
     let indexes;
 
-    // 1. O(n)2 complexity. ~ Runtime: 287 ms, Memory: 44.4 MB
+    // 1. Brute Force. O(n)2 complexity. ~ Runtime: 287 ms, Memory: 44.4 MB
     // nums.forEach((num, i) => { // O(n)
     //   nums.forEach((n, j) => { // O(n)
     //     if (i !== j && num + n === target) { // O(1)
@@ -39,7 +39,7 @@ let twoSum = function(nums, target) {
     //   });
     // });
 
-    // 2. O(n)2 complexity. ~ Runtime: 158 ms, Memory: 45.1 MB
+    // 2. Set. O(n)2 complexity. ~ Runtime: 158 ms, Memory: 45.1 MB
     // let numSet = new Set(nums); // O(n)
 
     // nums.forEach((num, i) => { // O(n)
@@ -51,7 +51,7 @@ let twoSum = function(nums, target) {
     //   }
     // });
 
-    // 3. O(n) complexity. ~ Runtime: 64 ms, Memory: 45.1 MB
+    // 3. Two-pass Hash Table with Map. O(n) complexity. ~ Runtime: 64 ms, Memory: 45.1 MB
     // const numMap = new Map();
 
     // nums.forEach((num, i) => { // O(n)
@@ -67,7 +67,7 @@ let twoSum = function(nums, target) {
     //   }
     // });
 
-    // 4. O(n) complexity. ~ Runtime: 53 ms, Memory: 45 MB
+    // 4. One-pass Hash Table with Map. O(n) complexity. ~ Runtime: 53 ms, Memory: 45 MB
     const numMap = new Map();
 
     nums.forEach((num, i) => { // O(n)
