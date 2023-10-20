@@ -32,6 +32,7 @@ const findMedianSortedArrays = function(nums1, nums2) {
     }
 };
 
+// Test Cases:
 findMedianSortedArrays([1, 3], [2]); // 2
 findMedianSortedArrays([1, 2], [3, 4]); // 2.5
 findMedianSortedArrays([3], [-2, -1]); // -1

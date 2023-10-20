@@ -57,6 +57,7 @@ const isValid = function(s) {
     return openingBracketsStack.length === 0;
 };
 
+// Test Cases:
 isValid('()'); // true
 isValid('()[]{}'); // true
 isValid('(]'); // false
