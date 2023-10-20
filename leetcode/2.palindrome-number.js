@@ -27,14 +27,14 @@
  */
 
 const isPalindrome = function(x) {
-    // 1. Convert to String array and reverse. ~ Runtime: 129 ms; Memory: 50.83 MB
+    // Solution 1. Convert to String array and reverse. ~ Runtime: 129 ms; Memory: 50.83 MB
 
     // const reversed = `${x}`.split('').reverse().join(''); // use `` instead of toString as toString cuts `-` symbols
 
     // return `${x}` === reversed;
     // -------------------------------------------------------- //
 
-    // 2. Without converting the integer to a string. ~Runtime: 135 ms; Memory: 49.86 MB
+    // Solution 2. Without converting the integer to a string. ~Runtime: 135 ms; Memory: 49.86 MB
     if (x < 0) { // as input is integer, filter out all negative values
       return false;
     }
