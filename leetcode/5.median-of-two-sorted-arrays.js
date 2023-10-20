@@ -22,8 +22,41 @@
 
 const findMedianSortedArrays = function(nums1, nums2) {
     // Solution 1. ~Runtime: 92ms; Memory: 47 MB
-    let combined = [...nums1, ...nums2].sort((a, b) => a-b); // JS sort: n log (n)
-    let total = combined.length;
+    // const combined = [...nums1, ...nums2].sort((a, b) => a-b); // JS sort: n log (n)
+    // const total = combined.length;
+    //
+    // if (total % 2 === 1) {
+    //     return combined[(total - 1) / 2];
+    // } else {
+    //     return (combined[total / 2 - 1] + combined[total / 2]) / 2;
+    // }
+
+    // Solution 2. ~Runtime: 106 ms; Memory: 46.58MB
+    let combined = [];
+    let i = 0;
+    let j = 0;
+
+    while (i < nums1.length && j < nums2.length) {
+        if (nums1[i] < nums2[j]) {
+            combined.push(nums1[i]);
+            i++;
+        } else {
+            combined.push(nums2[j]);
+            j++;
+        }
+    }
+
+    while (i < nums1.length) {
+        combined.push(nums1[i]);
+        i++;
+    }
+
+    while (j < nums2.length) {
+        combined.push(nums2[j]);
+        j++;
+    }
+
+    const total = combined.length;
 
     if (total % 2 === 1) {
         return combined[(total - 1) / 2];
