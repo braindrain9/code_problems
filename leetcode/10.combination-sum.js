@@ -38,13 +38,14 @@ const combinationSum = function(candidates, target) {
     function findSum(prevArr = [], prevSum = 0, index = 0) {
         for (let i = index; i < candidates.length; i++) {
             const sum = prevSum + candidates[i];
+            const arr = [...prevArr, candidates[i]];
 
             if (sum === target) {
-                result.push([...prevArr, candidates[i]]);
+                result.push(arr);
             }
 
             if (sum < target){
-                findSum([...prevArr, candidates[i]], sum, i);
+                findSum(arr, sum, i);
             }
         }
     }
