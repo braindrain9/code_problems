@@ -29,7 +29,7 @@
  * Output: "ZY"
  */
 
-// Using ASCII table where A = "26" and Z = "90"
+// Using ASCII table where A = "65" and Z = "90"
 const convertToTitle = function(columnNumber) {
     let result = '';
 

@@ -38,7 +38,7 @@ const singleNumber = function(nums) {
 
     /**
      * Solution 2: with XOR operation
-     * XOR of any number with itself is 1, so the duplicate numbers will become 1, so we will get the unique number.
+     * XOR of any number with itself is 1, so the duplicate numbers will become 1, and we will get the unique number.
      */
 
     // let result = 0;
