@@ -47,12 +47,16 @@ const multiply = function(num1, num2) {
       }
     }
 
-    // as we were saving space for carry over, if first index is 0 we need to remove it.
-    if (productArr[0] === 0) {
+    /**
+    * as we were saving space for carry over, if first index is 0 we need to remove it.
+     * also, one string could be '0000', or '0' * '0'
+    */
+
+    while (productArr[0] === 0) {
         productArr.shift();
     }
 
-    return productArr.join('');
+    return productArr.join('') || '0';
 };
 
 multiply('2', '3'); // '6'
