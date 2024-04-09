@@ -3,9 +3,9 @@
  */
 
 function flippingBits(n: number): number {
-    const MAX_NUMBER = Math.pow(2, 32) - 1; // max 32 bit int is 2^32 - 1
+    const MAX_32_INT = Math.pow(2, 32) - 1; // max 32 bit int is 2^32 - 1
 
-    return MAX_NUMBER - n;
+    return MAX_32_INT - n;
 }
 
 flippingBits(2147483647); // 2147483648
