@@ -49,4 +49,4 @@ function canConstruct(ransomNote: string, magazine: string): boolean {
 
 canConstruct("a", "b"); // return false
 canConstruct("aa", "ab"); // return false
-canConstruct("aa", "aab"); // return false
+canConstruct("aa", "aab"); // return true
